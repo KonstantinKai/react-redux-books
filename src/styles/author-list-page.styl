@@ -1,0 +1,30 @@
+@import './variables'
+
+.authors-container
+	.author-list
+		list-container()
+
+		.author-item
+			list-item()
+			background-image url('../images/no-user-img.png')
+			background-size cover
+			cursor pointer
+			
+			.author-actions
+				absolute 0 0 0 0
+				background-color alpha(black, .6)
+				color white
+				transition transform .4s
+				transform translate(0, 90%)
+				display flex
+				flex-flow column nowrap
+				justify-content space-between
+				padding 20px 0
+				max-height 85%
+				
+				.link
+					color @color
+					
+			&:hover
+				.author-actions
+					transform translate(0, 20%)

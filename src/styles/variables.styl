@@ -1,0 +1,33 @@
+_c1 = #464646
+
+list-container()
+	display flex
+	flex-flow row wrap
+	justify-content flex-start
+	
+	ul
+		margin 0
+		padding 0
+
+list-item()
+	width calc('(100% - 6%) / 4')
+	border-radius 3px
+	padding 20px
+	margin-right 2%
+	margin-bottom @margin-right
+	min-height 250px
+	text-align center
+	box-shadow 2px 2px 4px 1px alpha(black, .1)
+	transition box-shadow .4s, background .3s
+	position relative
+	background-position center
+	background-size 100%
+	background-repeat no-repeat
+	overflow hidden
+	
+	&:hover
+		box-shadow 2px 2px 4px 1px alpha(black, .5)
+	
+	&:nth-child(4n)
+		margin-right 0
+	
