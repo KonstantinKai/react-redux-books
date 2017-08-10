@@ -1,3 +1,3 @@
 export default (id) => {
-	return require('../images/b-' + id + '.jpg');
+    return require('../images/b-' + id + '.jpg');
 };

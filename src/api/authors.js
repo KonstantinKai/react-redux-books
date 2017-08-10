@@ -11,33 +11,33 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`.repeat(5);
 
 export const authors = [
-	{
-		...entities.authors[0],
-		books: [b[0], b[3]]
-	},
-	{
-		...entities.authors[1],
-		books: [b[1], b[2]]
-	},
-	{
-		...entities.authors[2],
-		books: [b[3], b[4], b[5]]
-	},
-	{
-		...entities.authors[3],
-		books: [b[6]]
-	},
-	{
-		...entities.authors[4],
-		books: [b[7], b[8], b[9]]
-	}
+    {
+        ...entities.authors[0],
+        books: [b[0], b[3]]
+    },
+    {
+        ...entities.authors[1],
+        books: [b[1], b[2]]
+    },
+    {
+        ...entities.authors[2],
+        books: [b[3], b[4], b[5]]
+    },
+    {
+        ...entities.authors[3],
+        books: [b[6]]
+    },
+    {
+        ...entities.authors[4],
+        books: [b[7], b[8], b[9]]
+    }
 ].map(author => {
-	return {
-		...author,
-		biography
-	};
+    return {
+        ...author,
+        biography
+    };
 });
 
 export default (id) => {
-	return fetch({entities: authors, id});
+    return fetch({entities: authors, id});
 };

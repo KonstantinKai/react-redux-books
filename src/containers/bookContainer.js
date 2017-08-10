@@ -10,29 +10,29 @@ import * as booksActions from '../actions/books';
 import BooksItem from '../components/books/item';
 
 class BookContainer extends Component {
-	render () {
-		return <BooksItem {...this.props} />
-	}
+    render () {
+        return <BooksItem {...this.props} />
+    }
 }
 
 const mapStateToProps = (state, ownProps) => {
-	return {
-		getBook: () => getBookById(state, ownProps.match.params.bookId),
-		getAuthors: (authors) => getAuthors(state, authors),
-		getGenres: (genres) => getGenres(state, genres),
-		isFetching: state.books.isFetching
-	}
+    return {
+        getBook: () => getBookById(state, ownProps.match.params.bookId),
+        getAuthors: (authors) => getAuthors(state, authors),
+        getGenres: (genres) => getGenres(state, genres),
+        isFetching: state.books.isFetching
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {
-	const {fetchBooksIfNeeded} = bindActionCreators(booksActions, dispatch);
+    const {fetchBooksIfNeeded} = bindActionCreators(booksActions, dispatch);
 
-	return {
-		fetchBookIfNeeded: (bookId) => fetchBooksIfNeeded(bookId)
-	};
+    return {
+        fetchBookIfNeeded: (bookId) => fetchBooksIfNeeded(bookId)
+    };
 };
 
 export default withRouter(connect(
-	mapStateToProps,
-	mapDispatchToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(BookContainer));

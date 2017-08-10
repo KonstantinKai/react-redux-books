@@ -6,28 +6,28 @@ import * as authorsActions from '../actions/authors';
 import {getAuthors, getAuthorBooks} from '../reducers/authors';
 
 class AuthorsListContainer extends Component {
-	render () {
-		return <AuthorsList {...this.props} />
-	}
+    render () {
+        return <AuthorsList {...this.props} />
+    }
 }
 
 const mapStateToProps = (state) => {
-	return {
-		isFetching: state.authors.isFetching,
-		authors: getAuthors(state),
-		getAuthorBooks: (books) => getAuthorBooks(state, books)
-	};
+    return {
+        isFetching: state.authors.isFetching,
+        authors: getAuthors(state),
+        getAuthorBooks: (books) => getAuthorBooks(state, books)
+    };
 };
 
 const mapDispatchToProps = (dispatch) => {
-	const {fetchAuthorsIfNeeded} = bindActionCreators(authorsActions, dispatch);
+    const {fetchAuthorsIfNeeded} = bindActionCreators(authorsActions, dispatch);
 
-	return {
-		fetchAuthorsIfNeeded
-	}
+    return {
+        fetchAuthorsIfNeeded
+    }
 }
 
 export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(AuthorsListContainer);

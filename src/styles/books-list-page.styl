@@ -1,35 +1,35 @@
 @import './variables'
 
 .books-container
-	.active-genre
-		margin-bottom 20px
+    .active-genre
+        margin-bottom 20px
 
-	.books-list
-		list-container()
-		
-		.book-item
-			list-item()
-			
-			&:before
-				content ''
-				absolute 0 0 0 0
-				background-color alpha(black, .7)
-			
-			&:hover
-				background-size 110%
-				
-			.book-info
-				position relative
-				z-index 1
-				display flex
-				flex-flow column nowrap
-				justify-content space-between
-				height 100%
-				
-				.book-authors
-					p
-						margin 5px 0
-						font-size 14px
-				
-			.link
-				color white
+    .books-list
+        list-container()
+        
+        .book-item
+            list-item()
+            
+            &:before
+                content ''
+                absolute 0 0 0 0
+                background-color alpha(black, .7)
+            
+            &:hover
+                background-size 110%
+                
+            .book-info
+                position relative
+                z-index 1
+                display flex
+                flex-flow column nowrap
+                justify-content space-between
+                height 100%
+                
+                .book-authors
+                    p
+                        margin 5px 0
+                        font-size 14px
+                
+            .link
+                color white

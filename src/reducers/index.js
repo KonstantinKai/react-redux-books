@@ -5,8 +5,8 @@ import genres from './genres';
 import authors from './authors';
 
 export default (router) => combineReducers({
-	books,
-	genres,
-	authors,
-	router
+    books,
+    genres,
+    authors,
+    router
 });

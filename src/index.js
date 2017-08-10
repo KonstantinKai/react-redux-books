@@ -15,16 +15,16 @@ const history = createHistory();
 const rMiddleware = routerMiddleware(history);
 
 const store = createStore(
-	reducers(routerReducer),
-	applyMiddleware(thunk, rMiddleware)
+    reducers(routerReducer),
+    applyMiddleware(thunk, rMiddleware)
 );
 
 render((
-	<Provider store={store}>
-		<ConnectedRouter history={history}>
-			<div>
-				<Route path="/" component={App}/>
-			</div>
-		</ConnectedRouter>
-	</Provider>
+    <Provider store={store}>
+        <ConnectedRouter history={history}>
+            <div>
+                <Route path="/" component={App}/>
+            </div>
+        </ConnectedRouter>
+    </Provider>
 ), document.getElementById('app'));
